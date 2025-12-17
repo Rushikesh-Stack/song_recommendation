@@ -67,7 +67,7 @@ def recommend(request: SongRequest):
 
     index_of_the_song = songs_data[songs_data['song'] == close_match].index[0]
 
-    # 🔥 Compute similarity ONLY for one song
+    #  Compute similarity ONLY for one song
     similarity_score = cosine_similarity(
         feature_vector[index_of_the_song],
         feature_vector
